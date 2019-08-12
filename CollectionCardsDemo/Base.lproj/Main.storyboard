@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionCardsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yHW-di-t7b">
+                                <rect key="frame" x="0.0" y="133.5" width="375" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="0Wz-NY-kdU" customClass="KRSCollectionFlowLayout" customModule="CollectionCardsDemo" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="LLn-h5-GRx">
+                                        <rect key="frame" x="8.5" y="0.0" width="358" height="381"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="381"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ti1-70-yWl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="381"/>
+                                                    <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Ti1-70-yWl" firstAttribute="leading" secondItem="LLn-h5-GRx" secondAttribute="leading" id="BdM-n8-Ktx"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ti1-70-yWl" secondAttribute="bottom" id="FYV-w1-U4n"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ti1-70-yWl" secondAttribute="trailing" id="RdS-cz-L3H"/>
+                                            <constraint firstItem="Ti1-70-yWl" firstAttribute="top" secondItem="LLn-h5-GRx" secondAttribute="top" id="XFB-0l-3Vz"/>
+                                        </constraints>
+                                        <size key="customSize" width="358" height="381"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="YdI-BM-a7y"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="l37-9u-7Vt"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yHW-di-t7b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4bf-dD-Zxt"/>
+                            <constraint firstItem="yHW-di-t7b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ieu-QR-XbZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yHW-di-t7b" secondAttribute="trailing" id="J1D-pe-4xz"/>
+                            <constraint firstItem="yHW-di-t7b" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="60:100" id="YUy-ub-fz5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="yHW-di-t7b" id="h2E-Ga-ky9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
